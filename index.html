@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Eco-Scanner</title>
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+</head>
+<body>
+
+<header>
+  <h1>Eco-Scanner</h1>
+  <input id="search" placeholder="Поиск маркировки…">
+</header>
+
+<div class="filters">
+  <button onclick="setFilter('all')">Все</button>
+  <button onclick="setFilter('safe')">Безопасные</button>
+  <button onclick="setFilter('danger')">Опасные</button>
+  <button onclick="showFav()">★ Избранное</button>
+</div>
+
+<section id="labels"></section>
+
+<h2>Пункты переработки</h2>
+<div id="map"></div>
+<div id="points"></div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="data.js"></script>
+<script src="map.js"></script>
+
+</body>
+</html>
